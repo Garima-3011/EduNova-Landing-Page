@@ -1,0 +1,1018 @@
+
+/* ==============================
+   1. GLOBAL STYLES
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #6558e8;
+    --primary-dark: #5043d1;
+    --dark: #20213a;
+    --text: #62647a;
+    --light: #f7f7ff;
+    --white: #ffffff;
+    --border: #ececf5;
+    --radius: 18px;
+    --shadow: 0 12px 35px rgba(38, 35, 90, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+
+/* ==============================
+   2. NAVIGATION
+================================= */
+
+.header {
+    background: rgba(255, 255, 255, 0.96);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-menu a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+.nav-menu .nav-btn {
+    background: var(--primary);
+    color: var(--white);
+    padding: 11px 21px;
+    border-radius: 9px;
+}
+
+.nav-menu .nav-btn:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+
+/* ==============================
+   3. HERO SECTION
+================================= */
+
+.hero {
+    padding: 85px 0 100px;
+    background:
+        radial-gradient(circle at 85% 20%, #eceaff, transparent 35%),
+        linear-gradient(120deg, #fafaff, #f4f3ff);
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.tag {
+    display: inline-block;
+    color: var(--primary);
+    background: #eeecff;
+    padding: 7px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.hero-text h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.13;
+    margin: 23px 0;
+    letter-spacing: -1.5px;
+}
+
+.hero-text h1 span {
+    color: var(--primary);
+}
+
+.hero-text > p {
+    color: var(--text);
+    max-width: 510px;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 8px 20px rgba(101, 88, 232, 0.25);
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 1px solid #d9d6fa;
+    color: var(--primary);
+    background: white;
+}
+
+.secondary-btn:hover {
+    transform: translateY(-3px);
+    background: #f1efff;
+}
+
+.hero-rating {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 35px;
+}
+
+.avatars {
+    display: flex;
+}
+
+.avatars span {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #dedbff;
+    color: var(--primary);
+    font-weight: 800;
+    border: 3px solid white;
+    margin-right: -9px;
+}
+
+.avatars span:nth-child(2) {
+    background: #ffe4ed;
+    color: #c54d78;
+}
+
+.avatars span:nth-child(3) {
+    background: #ffebd6;
+    color: #bd782c;
+}
+
+.hero-rating p {
+    color: var(--text);
+    font-size: 12px;
+}
+
+.hero-rating strong {
+    color: var(--dark);
+}
+
+
+/* ==============================
+   4. HERO VISUAL CARD
+================================= */
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.learning-card {
+    width: 100%;
+    max-width: 390px;
+    background: white;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 25px 65px rgba(62, 55, 130, 0.14);
+    position: relative;
+    z-index: 1;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: 1px;
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background: #42c99b;
+    border-radius: 50%;
+}
+
+.book-icon {
+    width: 85px;
+    height: 85px;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    background: #efedff;
+    border-radius: 20px;
+    margin: 28px auto 18px;
+}
+
+.learning-card h3 {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+}
+
+.learning-card > p {
+    color: var(--text);
+    text-align: center;
+    font-size: 12px;
+    margin: 7px 0 28px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    height: 9px;
+    background: #efeff7;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(90deg, #6558e8, #a49afa);
+    border-radius: 20px;
+}
+
+.mini-courses {
+    margin-top: 25px;
+    display: grid;
+    gap: 12px;
+}
+
+.mini-course {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #f8f8ff;
+    border-radius: 12px;
+}
+
+.course-icon {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    background: white;
+    border-radius: 9px;
+    font-size: 20px;
+}
+
+.mini-course strong,
+.mini-course small {
+    display: block;
+}
+
+.mini-course strong {
+    font-size: 12px;
+}
+
+.mini-course small {
+    font-size: 10px;
+    color: var(--text);
+}
+
+.floating-badge {
+    position: absolute;
+    right: -15px;
+    bottom: 25px;
+    padding: 13px 19px;
+    background: white;
+    color: var(--primary);
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: var(--shadow);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* ==============================
+   5. STATISTICS
+================================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 42px;
+    padding-bottom: 42px;
+    border-bottom: 1px solid var(--border);
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 31px;
+    color: var(--primary);
+}
+
+.stat-item p {
+    color: var(--text);
+    font-size: 13px;
+}
+
+
+/* ==============================
+   6. SECTION HEADINGS
+================================= */
+
+.section-heading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 48px;
+}
+
+.section-heading h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 38px;
+    margin: 14px 0 8px;
+    letter-spacing: -0.7px;
+}
+
+.section-heading p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+
+/* ==============================
+   7. COURSE CARDS
+================================= */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.course-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: white;
+    transition: 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+}
+
+.course-image {
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.course-image > span {
+    font-size: 48px;
+}
+
+.course-image small {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.purple {
+    background: #efedff;
+    color: #6558e8;
+}
+
+.pink {
+    background: #fff0f5;
+    color: #d95f91;
+}
+
+.orange {
+    background: #fff3e6;
+    color: #d58a35;
+}
+
+.course-details {
+    padding: 23px;
+}
+
+.course-level {
+    color: var(--primary);
+    background: #f0efff;
+    padding: 5px 10px;
+    font-size: 10px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.course-details h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    margin: 14px 0 7px;
+}
+
+.course-details > p {
+    font-size: 12px;
+    color: var(--text);
+    min-height: 55px;
+}
+
+.course-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    margin-top: 16px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.course-footer span {
+    color: var(--text);
+}
+
+.course-footer a {
+    color: var(--primary);
+}
+
+
+/* ==============================
+   8. FEATURES
+================================= */
+
+.features {
+    background: var(--light);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 28px 20px;
+    border-radius: var(--radius);
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    background: #efedff;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+.feature-card:nth-child(2) .feature-icon {
+    background: #fff0f5;
+}
+
+.feature-card:nth-child(3) .feature-icon {
+    background: #fff3e6;
+}
+
+.feature-card:nth-child(4) .feature-icon {
+    background: #e7f8f2;
+}
+
+.feature-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 17px;
+    margin-bottom: 9px;
+}
+
+.feature-card p {
+    font-size: 12px;
+    color: var(--text);
+}
+
+
+/* ==============================
+   9. TESTIMONIALS
+================================= */
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.testimonial-card {
+    padding: 27px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: white;
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: #f5a623;
+    letter-spacing: 3px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.testimonial-card > p {
+    font-size: 13px;
+    color: var(--text);
+    min-height: 90px;
+}
+
+.student {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    border-top: 1px solid var(--border);
+    padding-top: 17px;
+}
+
+.student-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #efedff;
+    color: var(--primary);
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+}
+
+.student strong,
+.student small {
+    display: block;
+}
+
+.student strong {
+    font-size: 12px;
+}
+
+.student small {
+    color: var(--text);
+    font-size: 10px;
+}
+
+
+/* ==============================
+   10. CALL TO ACTION
+================================= */
+
+.cta {
+    background: linear-gradient(120deg, #6558e8, #8d7df5);
+    color: white;
+    text-align: center;
+}
+
+.cta-content > span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.cta h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(29px, 4vw, 42px);
+    max-width: 650px;
+    margin: 15px auto;
+    line-height: 1.2;
+}
+
+.cta p {
+    max-width: 540px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #efedff;
+}
+
+.cta-btn {
+    margin-top: 27px;
+    background: white;
+    color: var(--primary);
+}
+
+.cta-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==============================
+   11. FOOTER
+================================= */
+
+.footer {
+    background: #20213a;
+    color: white;
+    padding-top: 65px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 45px;
+}
+
+.footer-logo {
+    color: white;
+}
+
+.footer-about p {
+    color: #b5b6ca;
+    max-width: 330px;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    font-size: 12px;
+    color: #b5b6ca;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid #3b3c51;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #b5b6ca;
+    font-size: 11px;
+}
+
+
+/* ==============================
+   12. SCROLL REVEAL ANIMATION
+================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==============================
+   13. RESPONSIVE DESIGN
+================================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-grid {
+        gap: 15px;
+    }
+
+    .course-details {
+        padding: 17px;
+    }
+
+    .footer-content {
+        gap: 30px;
+    }
+}
+
+
+/* Mobile Devices */
+@media (max-width: 650px) {
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu a {
+        display: block;
+    }
+
+    .nav-menu .nav-btn {
+        text-align: center;
+    }
+
+    .hero {
+        padding: 65px 0 80px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text > p {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-rating {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        margin-top: 15px;
+    }
+
+    .learning-card {
+        padding: 25px 20px;
+    }
+
+    .floating-badge {
+        right: 0;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+
+    .stat-item h2 {
+        font-size: 27px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-image {
+        height: 160px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card > p {
+        min-height: auto;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-about {
+        grid-column: 1 / -1;
+    }
+
+    .copyright {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* Small Mobile Devices */
+@media (max-width: 380px) {
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-about {
+        grid-column: auto;
+    }
+}
+
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
