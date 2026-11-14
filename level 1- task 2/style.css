@@ -1,0 +1,266 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7ff;
+    color: #252b42;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: white;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #343b83;
+}
+
+.logo span {
+    color: #7565e8;
+}
+
+.login-link {
+    color: #6254d9;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.main-container {
+    width: 85%;
+    max-width: 1150px;
+    margin: 65px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.welcome-section .tag {
+    display: inline-block;
+    background: #e9e7ff;
+    color: #6254d9;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.welcome-section h1 {
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #292e55;
+}
+
+.welcome-section p {
+    color: #777d91;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.benefits {
+    margin-top: 30px;
+}
+
+.benefits div {
+    margin-bottom: 17px;
+    color: #414966;
+    font-size: 15px;
+}
+
+.form-card {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(39, 45, 90, 0.08);
+}
+
+.form-heading {
+    margin-bottom: 25px;
+}
+
+.form-heading h2 {
+    font-size: 25px;
+    margin-bottom: 9px;
+}
+
+.form-heading p {
+    color: #85899a;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dfe1eb;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #7565e8;
+    box-shadow: 0 0 0 3px rgba(117, 101, 232, 0.12);
+}
+
+.form-group input.invalid {
+    border-color: #e34c4c;
+}
+
+.form-group input.valid {
+    border-color: #269c68;
+}
+
+.error {
+    display: block;
+    color: #d94242;
+    font-size: 12px;
+    margin-top: 6px;
+    min-height: 14px;
+}
+
+.password-hint {
+    display: block;
+    color: #888da0;
+    font-size: 11px;
+    margin-top: 7px;
+    line-height: 1.5;
+}
+
+.strength-container {
+    height: 5px;
+    background: #ececf2;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#strengthText {
+    display: block;
+    font-size: 11px;
+    margin-top: 5px;
+    color: #777d91;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #6859dc;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #5143c1;
+    transform: translateY(-2px);
+}
+
+.success-message {
+    color: #168451;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.terms {
+    text-align: center;
+    color: #9296a5;
+    font-size: 11px;
+    margin-top: 18px;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888da0;
+    font-size: 13px;
+}
+
+/* Tablet and mobile responsive design */
+@media (max-width: 850px) {
+    .main-container {
+        width: 90%;
+        gap: 35px;
+    }
+
+    .welcome-section h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .login-link {
+        font-size: 12px;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: 35px auto;
+        gap: 30px;
+    }
+
+    .welcome-section h1 {
+        font-size: 32px;
+    }
+
+    .welcome-section p {
+        font-size: 14px;
+    }
+
+    .form-card {
+        padding: 24px 20px;
+    }
+
+    .form-heading h2 {
+        font-size: 22px;
+    }
+}
